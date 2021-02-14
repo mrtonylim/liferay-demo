@@ -101,28 +101,28 @@
 
 ## Code Summary
 ### recog-service
-#### service.xml
+#### `service.xml`
 Entities for recognitions.
-#### RecognitionLocalServiceImpl.java, PerformanceRecognitionLocalServiceImpl.java, FriendshipRecognitionLocalServiceImpl.java
+#### `RecognitionLocalServiceImpl.java`, `PerformanceRecognitionLocalServiceImpl.java`, `FriendshipRecognitionLocalServiceImpl.java`
 Methods for adding recognitions.
-#### RecognitionModelResourcePermissionRegistrar.java, RecognitionPortletResourcePermissionRegistrar.java, default.xml
+#### `RecognitionModelResourcePermissionRegistrar.java`, `RecognitionPortletResourcePermissionRegistrar.java`, `default.xml`
 Permission definitions for 'VIEW'.
-#### RecognitionIndexer.java
+#### `RecognitionIndexer.java`
 Methods for enabling searching for recognitions.
 ### recog-web
-#### RecognitionPortlet.java
+#### `RecognitionPortlet.java`
 Methods for page rendering and actions.
-#### RecognitionActivityInterpreter.java
+#### `RecognitionActivityInterpreter.java`
 Methods for rendering in Activities widget for recognitions.
-#### view.jsp
+#### `view.jsp`
 The first page showing 'Recognize My Colleague' and 'View Recognitions' buttons.
-#### select-colleague.jsp
+#### `select-colleague.jsp`
 The page to search and select colleagues.
-#### select-value.jsp
+#### `select-value.jsp`
 The page to select values.
-#### recognition.jsp
+#### `recognition.jsp`
 The page to entry details and save for recognition. Also, the same page is used for view recognition after saving by using different view mode.
-#### recognition-list,jsp, recognition-actions.jsp
+#### `recognition-list,jsp`, `recognition-actions.jsp`
 The page to search and display the list for recognitions.
-#### default.xml
+#### `default.xml`
 Permission definitions for 'VIEW'.
