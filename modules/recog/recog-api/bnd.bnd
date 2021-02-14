@@ -1,0 +1,10 @@
+Bundle-Name: recog-api
+Bundle-SymbolicName: hong.recog.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	hong.recog.exception,\
+	hong.recog.model,\
+	hong.recog.service,\
+	hong.recog.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../recog-service/service.xml

@@ -1,0 +1,26 @@
+dependencies {
+  compile project(":modules:recog:recog-api")
+
+  compileOnly group: "com.liferay.portal", name: "release.portal.api"
+  compileOnly group: "com.liferay", name: "com.liferay.petra.function"
+  compileOnly group: "com.liferay", name: "com.liferay.petra.model.adapter"
+  compileOnly group: "com.liferay", name: "com.liferay.petra.reflect"
+  compileOnly group: "com.liferay", name: "com.liferay.portal.search.spi"
+  compileOnly group: "com.liferay", name: "com.liferay.portal.search.api"
+  compileOnly group: "com.liferay", name: "com.liferay.registry.api"
+  compileOnly group: "com.sun.mail", name: "javax.mail"
+}
+
+buildService {
+  apiDir = "../recog-api/src/main/java"
+}
+
+group = "hong.recog"
+
+tasks.withType(JavaCompile) {
+
+  // Generated classes using Jodd library are unable to be read when compiled against JDK 11
+
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
+}

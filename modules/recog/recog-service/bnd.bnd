@@ -1,0 +1,7 @@
+Bundle-Name: recog-service
+Bundle-SymbolicName: hong.recog.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Export-Package: hong.recog.search

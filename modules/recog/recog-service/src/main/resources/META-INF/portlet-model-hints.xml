@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="hong.recog.model.FriendshipRecognition">
+		<field name="mvccVersion" type="long" />
+		<field name="uuid" type="String" />
+		<field name="recognitionId" type="long" />
+		<field name="detailA" type="String" />
+		<field name="detailB" type="String" />
+		<field name="detailC" type="String" />
+	</model>
+	<model name="hong.recog.model.PerformanceRecognition">
+		<field name="mvccVersion" type="long" />
+		<field name="uuid" type="String" />
+		<field name="recognitionId" type="long" />
+		<field name="detail1" type="String" />
+		<field name="detail2" type="String" />
+	</model>
+	<model name="hong.recog.model.Recognition">
+		<field name="mvccVersion" type="long" />
+		<field name="uuid" type="String" />
+		<field name="recognitionId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="toUserId" type="long" />
+		<field name="toUserName" type="String" />
+		<field name="value" type="String" />
+		<field name="subject" type="String" />
+	</model>
+</model-hints>

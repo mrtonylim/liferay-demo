@@ -1,0 +1,4 @@
+Bundle-Name: recog-web
+Bundle-SymbolicName: hong.recog
+Bundle-Version: 1.0.0
+Export-Package: hong.recog.constants

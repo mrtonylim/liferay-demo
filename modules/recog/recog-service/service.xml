@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="hong.recog" mvcc-enabled="true">
+  <author>hong</author>
+  <namespace>RECOG</namespace>
+  <!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+  <entity local-service="true" name="Recognition" remote-service="true" uuid="true">
+    <!-- PK fields -->
+    <column name="recognitionId" primary="true" type="long"/>
+
+    <!-- Audit fields -->
+    <column name="companyId" type="long"/>
+    <column name="groupId" type="long"/>
+    <column name="userId" type="long"/>
+    <column name="userName" type="String"/>
+    <column name="createDate" type="Date"/>
+    <column name="modifiedDate" type="Date"/>
+
+    <!-- Other fields -->
+    <column name="toUserId" type="long"/>
+    <column name="toUserName" type="String"/>
+    <column name="value" type="String"/>
+    <column name="subject" type="String"/>
+
+    <!-- Order -->
+    <order>
+      <order-column name="modifiedDate" order-by="desc"/>
+    </order>
+
+    <!-- Finder methods -->
+    <finder name="UserId" return-type="Collection">
+      <finder-column name="userId"/>
+    </finder>
+    <finder name="ToUserId" return-type="Collection">
+      <finder-column name="toUserId"/>
+    </finder>
+    <finder name="Value" return-type="Collection">
+      <finder-column name="value"/>
+    </finder>
+  </entity>
+
+  <entity local-service="true" name="PerformanceRecognition" remote-service="true" uuid="true">
+    <column name="recognitionId" primary="true" type="long"/>
+    <column name="detail1" type="String"/>
+    <column name="detail2" type="String"/>
+
+    <finder name="RecognitionId" return-type="PerformanceRecognition">
+      <finder-column name="recognitionId"/>
+    </finder>
+  </entity>
+
+  <entity local-service="true" name="FriendshipRecognition" remote-service="true" uuid="true">
+    <column name="recognitionId" primary="true" type="long"/>
+    <column name="detailA" type="String"/>
+    <column name="detailB" type="String"/>
+    <column name="detailC" type="String"/>
+
+    <finder name="RecognitionId" return-type="FriendshipRecognition">
+      <finder-column name="recognitionId"/>
+    </finder>
+  </entity>
+</service-builder>
